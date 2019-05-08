@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
-ADD target/University-0.0.1-SNAPSHOT.war University.war
-EXPOSE 1986
-ENTRYPOINT ["java","-Dspring.profiles.active=dev","/University.war"]
+FROM tomcat:9.0-jre8-alpine
+ADD target/University-0.0.1-SNAPSHOT.jar University.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-Dspring.profiles.active=prod","-jar","University.jar"]
