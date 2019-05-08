@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: back-end
+  name: back-end
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: back-end
+    spec:
+      containers:
+      - name: web
+        image: gcr.io/$PROJECT_ID/back-end:$BUILD_ID
+        ports:
+        - containerPort: 8080
