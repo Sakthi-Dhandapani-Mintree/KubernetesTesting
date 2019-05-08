@@ -5,7 +5,7 @@ metadata:
     app: back-end
   name: back-end
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
