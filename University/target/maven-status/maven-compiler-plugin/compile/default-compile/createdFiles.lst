@@ -1,0 +1,4 @@
+com\kalingauniversity\UniversityApplication.class
+com\kalingauniversity\controller\MyDevController$MyErrorController.class
+com\kalingauniversity\controller\MyDevController.class
+com\kalingauniversity\controller\MyProdController.class
