@@ -9,7 +9,7 @@ steps:
   dir: 'University/'
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/back-end:1.0.$BUILD_ID','.']
-  dir: 'KubernetesTesting/University'
+  dir: 'University/'
   timeout: 180s
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/back-end:1.0.$BUILD_ID']
