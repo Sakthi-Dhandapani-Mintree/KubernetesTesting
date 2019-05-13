@@ -18,8 +18,8 @@ steps:
   args: ['apply', '-f', 'k8s/']
   dir: 'University/'
   env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER= sample-example'
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
   - set
@@ -28,5 +28,5 @@ steps:
   - back-end
   - web=gcr.io/$PROJECT_ID/back-end:1.0.$BUILD_ID
   env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER= sample-example'
